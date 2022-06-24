@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:login_form_flutter/components/login_button.dart';
 import 'package:login_form_flutter/components/logo_with_text.dart';
-import 'package:login_form_flutter/components/textfield.dart';
+import 'package:login_form_flutter/components/email_textfield.dart';
+import 'package:login_form_flutter/components/password_textfield.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -17,21 +19,28 @@ class LoginPage extends StatelessWidget {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const Spacer(),
             const LogoWithText(),
             const SizedBox(
               height: 24,
             ),
-            const MyTextfield(),
+            const EmailTextfield(),
             const SizedBox(
               height: 12,
             ),
-            const MyTextfield(),
+            const PasswordTextfield(),
             TextButton(
               onPressed: () {},
               child: const Text('Forgot Password?'),
-            )
+            ),
+            const LoginButton(),
+            const Spacer(),
+            TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(primary: Colors.grey.shade600),
+                child: const Text('New User? Create an Account'))
           ],
         ),
       ),
