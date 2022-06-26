@@ -24,16 +24,22 @@ class LoginPage extends StatelessWidget {
             const Spacer(),
             const LogoWithText(),
             const SizedBox(
-              height: 24,
+              height: 26,
             ),
             const EmailTextfield(),
             const SizedBox(
               height: 12,
             ),
             const PasswordTextfield(),
+            const SizedBox(
+              height: 6,
+            ),
             TextButton(
               onPressed: () {},
               child: const Text('Forgot Password?'),
+            ),
+            const SizedBox(
+              height: 6,
             ),
             const LoginButton(),
             const Spacer(),

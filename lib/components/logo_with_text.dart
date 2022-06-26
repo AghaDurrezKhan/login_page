@@ -19,7 +19,11 @@ class LogoWithText extends StatelessWidget {
         ),
         const Text(
           'Flutter',
-          style: TextStyle(fontSize: 30),
+          style: TextStyle(
+              fontSize: 36,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1,
+              color: Color.fromARGB(255, 80, 80, 80)),
         ),
       ],
     );

@@ -7,15 +7,16 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        print('Login Successful');
-      },
+    return Material(
       child: Container(
         height: 50,
         width: 200,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+          boxShadow: const [
+            BoxShadow(
+                color: Colors.black38, blurRadius: 4, offset: Offset(2, 4))
+          ],
+          borderRadius: BorderRadius.circular(25),
           color: Colors.blue,
         ),
         child: const Padding(
@@ -28,6 +29,8 @@ class LoginButton extends StatelessWidget {
           ),
         ),
       ),
+      elevation: 2,
+      shape: const CircleBorder(),
     );
   }
 }

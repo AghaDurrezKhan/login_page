@@ -5,9 +5,16 @@ class PasswordTextfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const TextField(
-      decoration:
-          InputDecoration(border: OutlineInputBorder(), hintText: 'Password'),
+    return TextField(
+      decoration: InputDecoration(
+          filled: true,
+          fillColor: const Color.fromARGB(30, 33, 150, 243),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
+          prefixIcon: const Icon(
+            Icons.key,
+            color: Colors.blue,
+          ),
+          hintText: 'Password'),
     );
   }
 }
